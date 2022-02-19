@@ -22,3 +22,15 @@ let menu = document.querySelector('.bi-list');
     document.querySelector('.navbar').classList.remove('active');
     menu.classList.remove('bi-x');
  });
+
+
+
+//cambio d ecolor del nav al scrolear
+ window.addEventListener('scroll', function()  {
+    let $sheader = document.getElementById('header')
+    if (window.scrollY > 20){
+        $sheader.style.setProperty( 'background', '#eb4d4b')
+    }else{
+    $sheader.style.setProperty( 'background', '#333')
+    }
+    })

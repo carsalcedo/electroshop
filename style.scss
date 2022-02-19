@@ -442,7 +442,220 @@ body{
     }
 }
 
+//styles offer
 
+#offer{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+
+    .heading{
+        @include heading();
+    }
+
+    .images{
+        min-height: 20vh;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .box{
+            height: 25rem;
+            width: 30rem;
+            text-align: center;
+            margin: 2rem;
+
+            img{
+                height: 20rem;
+                width: 20rem;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+            h3{
+                color: $red;
+                font-size: 2.5rem;
+                margin: 1rem 0;
+            }
+        }
+    }
+    .deal{
+        background: url(./assets/image-banner.png), linear-gradient($red, $red) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-blend-mode: screen;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem 0;
+        width: 100%;
+
+        .image{
+            img{
+                height: 50vh;
+            }
+        }
+        .content{
+            text-shadow: .1rem .1rem .3rem #333;
+            h4{
+                font-size: 4rem;
+                color: $blue;
+            }
+            p{
+                font-size: 2rem;
+                color: #fff;
+            }
+            .stars{
+                i{
+                    color: gold;
+                    font-size: 1.5rem;
+                }
+            }
+            .price{
+                font-size: 3rem;
+                color: #fff;
+            }
+            button{
+                @include button();
+                &:hover{
+                    background: #333;
+                }
+            }
+        }
+    }
+}
+
+//marks section
+.marks{
+    width: 100vw;
+    .content{
+        padding: 3rem 0;
+        .rows{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            img{
+                height: 15rem;
+            }
+        }
+    }
+}
+
+//newsletter
+#newsletter{
+    width: 100vw;
+    background: linear-gradient(rgba(0,0,255.4), rgba(0,0,255,.4)), url(./assets/bannerletter.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 6rem 0;
+    text-align: center;
+
+    h1{
+        font-size: 6rem;
+        color: #fff;
+    }
+    p{
+        font-size: 3rem;
+        color: #f9f9f9;
+    }
+    input[type="text"]{
+        outline: none;
+        border: none;
+        background: #333;
+        color: #fff;
+        height: 4rem;
+        width: 34rem;
+        border-radius: 5rem;
+        font-size: 1.5rem;
+        padding: 1.5rem;
+        &::placeholder{
+            color: #ccc;
+        }
+    }
+    input[type="submit"]{
+        display: inline;
+        @include button();
+        margin-top: 2rem;
+        background: $red;
+        &:hover{
+            background: #333;
+        }
+    }
+}
+//footer styles
+footer{
+    padding: 2rem 0;
+    background: #333;
+    width: 100vw;
+    .row{
+        width: 100%;
+        margin: 0;
+    }
+
+    .brand-info{
+        margin: 1rem;
+        padding: 0;
+        a{
+            color: #fff;
+            &:hover{
+                text-decoration: none;
+            }
+            i{
+                padding: 0 .5rem;
+                font-size: 2rem ;
+            }
+            h3{
+                display: inline;
+                font-size: 2rem;
+            }
+        }
+        p{
+            color: #ccc;
+            padding: 2rem;
+            margin: 0;
+            font-size: 1.5rem;
+        }
+    }
+    
+    .links, .follow{
+        padding: 0;
+        margin: 1rem;
+        h3{
+            font-size: 2rem;
+            color: #fff;
+        }
+        .nav-links, .follow-us-links{
+            display: flex;
+            flex-flow: column;
+
+            a{
+                color: #ccc;
+                font-size: 1.5rem;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .credit{
+        font-size: 2rem;
+        padding-top: 1.35rem;
+        width: 100%;
+        border-top: .1rem solid rgba(255,255,255, .5);
+        color: #fff;
+        span{
+            color: $red;
+        }
+    }
+}
 
 
 //media querys
@@ -476,4 +689,65 @@ body{
             }
         }
     }
+
+    #offer{
+        .deal{
+            flex-flow: column;
+            .image{
+                img{
+                    height: auto;
+                    width: 100%;
+                }
+            }
+            .content{
+                text-align: center;
+
+            }
+        }
+    }
+}
+
+
+@media (max-width:600px){
+    #review{
+        .heading{
+            padding-top: 10rem;
+        }
+        .box-container{
+            .box{
+                position: relative;
+                height: 50vh;
+
+                .image{
+                    position: absolute;
+                    top: -4rem;
+                    margin: 0;
+
+                    img{
+                        border-radius: 5rem;
+                    }
+                }
+                .comment{
+                    border-radius: 1rem;
+                    text-align: center;
+                    width: 40rem;
+
+                    h3{
+                        text-align: center;
+                        margin-top: -2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #newsletter{
+        h1{
+            font-size: 4rem;
+        }
+        p{
+            font-size: 2rem;
+        }
+    }
+
 }

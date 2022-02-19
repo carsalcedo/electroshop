@@ -415,6 +415,247 @@ body {
   font-size: 2.5rem;
 }
 
+#offer {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+#offer .heading {
+  color: #4834d4;
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 5rem;
+  margin: 2rem 0;
+  position: relative;
+}
+#offer .heading::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0.3rem;
+  width: 60%;
+  background: #eb4d4b;
+}
+#offer .images {
+  min-height: 20vh;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#offer .images .box {
+  height: 25rem;
+  width: 30rem;
+  text-align: center;
+  margin: 2rem;
+}
+#offer .images .box img {
+  height: 20rem;
+  width: 20rem;
+}
+#offer .images .box img:hover {
+  transform: scale(1.1);
+}
+#offer .images .box h3 {
+  color: #eb4d4b;
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+#offer .deal {
+  background: url(./assets/image-banner.png), linear-gradient(#eb4d4b, #eb4d4b) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: screen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+  width: 100%;
+}
+#offer .deal .image img {
+  height: 50vh;
+}
+#offer .deal .content {
+  text-shadow: 0.1rem 0.1rem 0.3rem #333;
+}
+#offer .deal .content h4 {
+  font-size: 4rem;
+  color: #4834d4;
+}
+#offer .deal .content p {
+  font-size: 2rem;
+  color: #fff;
+}
+#offer .deal .content .stars i {
+  color: gold;
+  font-size: 1.5rem;
+}
+#offer .deal .content .price {
+  font-size: 3rem;
+  color: #fff;
+}
+#offer .deal .content button {
+  outline: none;
+  border: none;
+  height: 4rem;
+  width: 16rem;
+  background: #4834d4;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  border-radius: 5rem;
+  text-transform: capitalize;
+}
+#offer .deal .content button:hover {
+  background: #eb4d4b;
+  letter-spacing: 0.1rem;
+}
+#offer .deal .content button:hover {
+  background: #333;
+}
+
+.marks {
+  width: 100vw;
+}
+.marks .content {
+  padding: 3rem 0;
+}
+.marks .content .rows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.marks .content .rows img {
+  height: 15rem;
+}
+
+#newsletter {
+  width: 100vw;
+  background: linear-gradient(blue, rgba(0, 0, 255, 0.4)), url(./assets/bannerletter.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 6rem 0;
+  text-align: center;
+}
+#newsletter h1 {
+  font-size: 6rem;
+  color: #fff;
+}
+#newsletter p {
+  font-size: 3rem;
+  color: #f9f9f9;
+}
+#newsletter input[type=text] {
+  outline: none;
+  border: none;
+  background: #333;
+  color: #fff;
+  height: 4rem;
+  width: 34rem;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+}
+#newsletter input[type=text]::placeholder {
+  color: #ccc;
+}
+#newsletter input[type=submit] {
+  display: inline;
+  outline: none;
+  border: none;
+  height: 4rem;
+  width: 16rem;
+  background: #4834d4;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  border-radius: 5rem;
+  text-transform: capitalize;
+  margin-top: 2rem;
+  background: #eb4d4b;
+}
+#newsletter input[type=submit]:hover {
+  background: #eb4d4b;
+  letter-spacing: 0.1rem;
+}
+#newsletter input[type=submit]:hover {
+  background: #333;
+}
+
+footer {
+  padding: 2rem 0;
+  background: #333;
+  width: 100vw;
+}
+footer .row {
+  width: 100%;
+  margin: 0;
+}
+footer .brand-info {
+  margin: 1rem;
+  padding: 0;
+}
+footer .brand-info a {
+  color: #fff;
+}
+footer .brand-info a:hover {
+  text-decoration: none;
+}
+footer .brand-info a i {
+  padding: 0 0.5rem;
+  font-size: 2rem;
+}
+footer .brand-info a h3 {
+  display: inline;
+  font-size: 2rem;
+}
+footer .brand-info p {
+  color: #ccc;
+  padding: 2rem;
+  margin: 0;
+  font-size: 1.5rem;
+}
+footer .links, footer .follow {
+  padding: 0;
+  margin: 1rem;
+}
+footer .links h3, footer .follow h3 {
+  font-size: 2rem;
+  color: #fff;
+}
+footer .links .nav-links, footer .links .follow-us-links, footer .follow .nav-links, footer .follow .follow-us-links {
+  display: flex;
+  flex-flow: column;
+}
+footer .links .nav-links a, footer .links .follow-us-links a, footer .follow .nav-links a, footer .follow .follow-us-links a {
+  color: #ccc;
+  font-size: 1.5rem;
+}
+footer .links .nav-links a:hover, footer .links .follow-us-links a:hover, footer .follow .nav-links a:hover, footer .follow .follow-us-links a:hover {
+  color: #fff;
+}
+footer .credit {
+  font-size: 2rem;
+  padding-top: 1.35rem;
+  width: 100%;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+footer .credit span {
+  color: #eb4d4b;
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 55%;
@@ -436,6 +677,50 @@ body {
   #product .product-container .title {
     margin-left: 0;
     text-align: center;
+  }
+
+  #offer .deal {
+    flex-flow: column;
+  }
+  #offer .deal .image img {
+    height: auto;
+    width: 100%;
+  }
+  #offer .deal .content {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  #review .heading {
+    padding-top: 10rem;
+  }
+  #review .box-container .box {
+    position: relative;
+    height: 50vh;
+  }
+  #review .box-container .box .image {
+    position: absolute;
+    top: -4rem;
+    margin: 0;
+  }
+  #review .box-container .box .image img {
+    border-radius: 5rem;
+  }
+  #review .box-container .box .comment {
+    border-radius: 1rem;
+    text-align: center;
+    width: 40rem;
+  }
+  #review .box-container .box .comment h3 {
+    text-align: center;
+    margin-top: -2rem;
+  }
+
+  #newsletter h1 {
+    font-size: 4rem;
+  }
+  #newsletter p {
+    font-size: 2rem;
   }
 }
 
